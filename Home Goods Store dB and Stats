@@ -1,0 +1,29 @@
+--Create a home goods store database
+
+
+CREATE TABLE home_goods (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, location TEXT, quantity INTEGER);
+
+INSERT INTO home_goods VALUES (1, "table lamp", 15, "lighting", 10);
+INSERT INTO home_goods VALUES (2, "head board", 200, "furniture", 3);
+INSERT INTO home_goods VALUES (3, "sisel rug", 99, "rugs", 1);
+INSERT INTO home_goods VALUES (4, "silk rug", 150, "rugs", 2);
+INSERT INTO home_goods VALUES (5, "floor lamp", 25, "lighting", 5);
+INSERT INTO home_goods VALUES (6, "dresser", 225, "furniture", 4);
+INSERT INTO home_goods VALUES (7, "bath mat", 10, "bath", 20);
+INSERT INTO home_goods VALUES (8, "bath mirror", 30, "bath", 5);
+INSERT INTO home_goods VALUES (9, "counter stool", 50, "furniture", 8);
+INSERT INTO home_goods VALUES (10, "coffee table", 125, "furniture", 2);
+INSERT INTO home_goods VALUES (11, "pendant light", 27, "lighting", 3);
+INSERT INTO home_goods VALUES (12, "sconce", 13, "lighting", 10);
+INSERT INTO home_goods VALUES (13, "chair", 55, "furniture", 20);
+INSERT INTO home_goods VALUES (14, "kitchen rug", 22, "rugs", 20);
+INSERT INTO home_goods VALUES (15, "shower curtain", 25, "bath", 30);
+
+--Order the items by price
+SELECT * FROM home_goods ORDER BY price;
+
+--get a sum of the quantify of items
+SELECT SUM(quantity) FROM home_goods;   
+
+--get an average price
+SELECT AVG(price) FROM home_goods;
